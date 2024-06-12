@@ -37,6 +37,7 @@ public class OfferController {
 	public String createOffer(@RequestBody Offer offer) throws Exception {
 		offer.setStatus(true);
 		theOfferDao.save(offer);
+		System.out.println("offer created");
 		return JsonResponseUtils.keyResponse(STATUS.Success);
 	}
 
